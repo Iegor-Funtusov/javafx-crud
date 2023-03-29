@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx/17.0.2"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ua.com.alevel.controller.DepartmentController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <children>
+        <VBox layoutX="26.0" layoutY="22.0" spacing="15.0">
+            <children>
+                <Label text="ID">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label text="Type">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+        <VBox layoutX="88.0" layoutY="22.0" prefHeight="130.0" prefWidth="129.0" spacing="10.0">
+            <children>
+                <TextField fx:id="depIdText" />
+                <TextField fx:id="depTypeText" />
+                <Button fx:id="attachButton" mnemonicParsing="false" onAction="#attachButton" text="Attach" />
+            </children>
+        </VBox>
+        <TableView fx:id="departmentTable" layoutX="238.0" layoutY="22.0" prefHeight="210.0" prefWidth="400.0">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="35.0" text="ID" />
+                <TableColumn fx:id="typeColumn" prefWidth="120.0" text="Department type" />
+                <TableColumn fx:id="employeeCountColumn" prefWidth="120.0" text="Employee count" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

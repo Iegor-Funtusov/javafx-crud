@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ua.com.alevel.controller.EmployeeController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <children>
+        <VBox layoutX="26.0" layoutY="22.0" spacing="15.0">
+            <children>
+                <Label text="ID">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label text="First name">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label text="Last name">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label text="Age">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+        <VBox layoutX="96.0" layoutY="22.0" prefHeight="130.0" prefWidth="129.0" spacing="10.0">
+            <children>
+                <TextField fx:id="empIdText" />
+                <TextField fx:id="firstNameText" />
+                <TextField fx:id="lastNameText" />
+                <TextField fx:id="ageText" />
+            </children>
+        </VBox>
+        <HBox layoutX="26.0" layoutY="202.0" spacing="10.0">
+            <children>
+                <Button fx:id="insertButton" mnemonicParsing="false" onAction="#insertButton" prefHeight="30.0" prefWidth="60.0" text="Insert" />
+                <Button fx:id="updateButton" mnemonicParsing="false" onAction="#updateButton" prefHeight="30.0" prefWidth="60.0" text="Update" />
+                <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteButton" prefHeight="30.0" prefWidth="60.0" text="Delete" />
+            </children>
+        </HBox>
+        <TableView fx:id="employeeTable" layoutX="238.0" layoutY="22.0" prefHeight="210.0" prefWidth="400.0">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="35.0" text="ID" />
+                <TableColumn fx:id="firstNameColumn" prefWidth="120.0" text="First name" />
+                <TableColumn fx:id="lastNameColumn" prefWidth="120.0" text="Last name" />
+                <TableColumn fx:id="ageColumn" prefWidth="60.0" text="Age" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

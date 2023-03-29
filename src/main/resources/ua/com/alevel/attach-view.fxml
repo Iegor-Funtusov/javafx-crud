@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ua.com.alevel.controller.AttachViewController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <children>
+        <VBox layoutX="26.0" layoutY="22.0" spacing="15.0">
+            <children>
+                <Label fx:id="departmentTypeLabel">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+        <VBox layoutX="130.0" layoutY="22.0" spacing="15.0">
+            <children>
+                <TableView fx:id="employeesAttachedTable">
+                    <columns>
+                        <TableColumn fx:id="employeeAttachedIdColumn" prefWidth="35.0" text="ID" />
+                        <TableColumn fx:id="employeeAttachedFirstNameColumn" prefWidth="120.0" text="First name" />
+                        <TableColumn fx:id="employeeAttachedLastNameColumn" prefWidth="120.0" text="Last name" />
+                        <TableColumn fx:id="employeeAttachedAgeColumn" prefWidth="60.0" text="Age" />
+                    </columns>
+                </TableView>
+            </children>
+        </VBox>
+        <VBox layoutX="490.0" layoutY="22.0" spacing="15.0">
+            <children>
+                <Button fx:id="attachButton" mnemonicParsing="false" onAction="#attach" prefHeight="30.0" prefWidth="60.0" text="Attach" />
+                <Button fx:id="unAttachButton" mnemonicParsing="false" onAction="#unAttach" prefHeight="30.0" prefWidth="60.0" text="Detach" />
+            </children>
+        </VBox>
+        <VBox layoutX="570.0" layoutY="22.0" spacing="15.0">
+            <children>
+                <TableView fx:id="employeesNonAttachedTable">
+                    <columns>
+                        <TableColumn fx:id="employeeNonAttachedIdColumn" prefWidth="35.0" text="ID" />
+                        <TableColumn fx:id="employeeNonAttachedFirstNameColumn" prefWidth="120.0" text="First name" />
+                        <TableColumn fx:id="employeeNonAttachedLastNameColumn" prefWidth="120.0" text="Last name" />
+                        <TableColumn fx:id="employeeNonAttachedAgeColumn" prefWidth="60.0" text="Age" />
+                    </columns>
+                </TableView>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
